@@ -1,0 +1,156 @@
+/*******************************************
+ * Móviles: entre 320 y 480 píxeles.       *
+ * Tablets: entre 768 y 1024 píxeles.      *
+ * Pantallas grandes: más de 1200 píxeles. *
+ *******************************************/
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+ :root{
+     --background-color: #FEF9EF;
+     --color-1: #A2D2FF;
+     --color-2: #FF865E;
+     --color-3: #FEE440;
+     --color-4: #222831;
+     --color-5: #FFF;
+ 
+     --primary-font: 'Poppins'
+ }
+ * {
+     list-style: none;
+     text-decoration: none;
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     background-color: #000;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .nav {
+     align-items: center;
+     background-color: transparent;
+     display: grid;
+     height: 80px;
+     grid-template-columns: 1fr 2fr 1fr;
+     position: relative;
+     width: 100%;
+ }
+ 
+ 
+ .logo {
+     display: flex;
+     width: 100px;
+ }
+ 
+  
+ .logo span {
+     /* flex: 0 0 auto; */
+     color: #FFF;
+     font: normal normal bold 36px/0 var(--primary-font);
+     padding-inline: 10px;
+     border-right: 2px solid #FFF;
+ }
+ .nav_list{
+     /* flex: 0 0 auto; */
+     display: block;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+     white-space:nowrap
+ 
+ } 
+ 
+ .nav_item {
+     /* width: 25%; */
+     margin: 0 10px;
+     padding: 0 10px;
+     box-sizing: border-box;
+     display: inline-block;
+     position: relative;
+     text-align: center;
+ }
+ 
+ .nav_link {
+     color: var(--color-5);
+     font: normal normal normal 22px/2rem var(--primary-font);
+     /* border-bottom: 0px solid #FFF; */
+ 
+ }
+ 
+ .nav_item-active::after{
+     content: '';
+     position: absolute;
+     margin: 0 4px;
+     bottom: 0;
+     left: 0;
+     height: 3px;
+     width: 0px;
+     transition: width 1s;
+     background-color: #FFF;
+ }
+ 
+ .nav_item-active:not(:nth-child(2)):hover::after{
+     width: 100%;
+ }
+ 
+ .dropdown {
+     visibility: hidden;
+     opacity: 0;
+     display: block;
+     background-color: #FFF;
+     box-sizing: content-box;
+     position: absolute;
+     width: 150px;
+     height: 0px;
+     top: 100%;
+     left: 4px;
+     z-index: 9999;
+     transition: all 400ms;
+ }
+ 
+ .nav_item-active:hover .dropdown{
+     opacity: 1;
+     visibility: visible;
+     height: 56px;
+ }
+ 
+ .nav_item-active:hover .dropdown_list {
+     border-bottom: 2px solid #FFF;
+     border-left: 2px solid #FFF;
+ }
+ 
+ .dropdown_item {
+     padding: 5px 10px;
+     fill-opacity: 20%;
+     transition: all ease-in-out 420ms;
+     cursor: pointer;
+ }
+ 
+ .dropdown_item:hover {
+     background-color: #000;
+     color: #FFF;
+     opacity: 100%;
+ }
+ 
+ .cart-icon {
+     color: red;
+ }
+ 
+ 
+ @media (max-width: 768px) {
+     .nav {
+         margin-top: 20px;
+         place-items: center;
+         grid-template-columns: 1fr;
+     }
+ 
+     .logo span {
+         border-right: none;
+         border-bottom: 2px solid #FFF;
+     }
+ }

@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/Contenedor/ItemListContainer'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>My Ecommerce</h1>
-        <h2>Qué Buena Remera!</h2>
+      <header className='header'>
+        <NavBar />
       </header>
+      <main>
+        <ItemListContainer />
+      </main>
     </div>
   );
 }

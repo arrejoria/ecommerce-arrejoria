@@ -102,11 +102,10 @@
      visibility: hidden;
      opacity: 0;
      display: block;
-     background-color: #FFF;
      box-sizing: content-box;
      position: absolute;
      width: 150px;
-     height: 0px;
+     height: auto;
      top: 100%;
      left: 4px;
      z-index: 9999;
@@ -120,6 +119,7 @@
  }
  
  .nav_item-active:hover .dropdown_list {
+     background-color: #FFF;
      border-bottom: 2px solid #FFF;
      border-left: 2px solid #FFF;
  }
@@ -127,13 +127,19 @@
  .dropdown_item {
      padding: 5px 10px;
      fill-opacity: 20%;
-     transition: all ease-in-out 420ms;
+     transition: all ease-in-out 550ms;
      cursor: pointer;
+ }
+
+ .dropdown_item a {
+    color: #111;
+ }
+ .dropdown_item:hover a{
+     color: #FFF;
  }
  
  .dropdown_item:hover {
      background-color: #000;
-     color: #FFF;
      opacity: 100%;
  }
  

@@ -1,10 +1,14 @@
 
 
+
 .main-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    background-image: url('/src/components/img/QBR-main_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100%;
 }
 
 .main-title {
@@ -28,3 +32,7 @@
     object-position: 0px 4px;
     border-radius: 4%;
 }
+
+/* * {
+    color: #FFF;
+} */

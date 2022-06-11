@@ -61,6 +61,7 @@
      font: normal normal bold 36px/0 var(--primary-font);
      padding-inline: 10px;
      border-right: 2px solid #FFF;
+     vertical-align: middle;
  }
  .nav_list{
      /* flex: 0 0 auto; */

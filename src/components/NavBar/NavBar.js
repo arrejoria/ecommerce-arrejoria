@@ -1,42 +1,45 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Container } from "@mui/material";
-// import logoSite from '../img/QBR.jpeg'
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
+
+
   return (
-    <Container>
+    <Container component="header" className="header">
       <nav className="nav">
         <div className="logo">
-          <a href="/package-lock.json">
+          <Link to="/">
             <span className="nav_logo">QBR</span>
-          </a>
+          </Link>
         </div>
         <ul className="nav_list">
           <li className="nav_item nav_item-active">
-            <a href="/package-lock.json" className="nav_link">
-              Todo
-            </a>
+            <Link to="/" className="nav_link">
+              Inicio
+            </Link>
           </li>
           <li className="nav_item nav_item-active">
-            <a href="/package-lock.json" className="nav_link">
+            <Link to="/products" className="nav_link">
               Remeras
-            </a>
+            </Link>
             <div className="dropdown">
               <ul className="dropdown_list">
                 <li className="dropdown_item">
-                  <a href="/" className="dropdown_link">
+                  <Link to="/products/category/movies" className="dropdown_link">
                     Peliculas
-                  </a>
+                  </Link>
                 </li>
                 <li className="dropdown_item">
-                  <a href="/" className="dropdown_link">
+                  <Link to="/products/category/anime" className="dropdown_link">
                     Animes
-                  </a>
+                  </Link>
                 </li>
                 <li className="dropdown_item">
-                  <a href="/" className="dropdown_link">
+                  <Link to="/products/category/games" className="dropdown_link">
                     Juegos
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

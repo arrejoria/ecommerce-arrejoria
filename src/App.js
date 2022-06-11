@@ -1,21 +1,26 @@
 import './App.css';
-import React from 'react';
+import {Container} from '@mui/material'
+import React, {useState} from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Contenedor/ItemListContainer'
-import MercadoLibre from './components/MercadoLibre/MercadoLibre';
+import ItemDetailContainer from './components/Contenedor/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 function App() {
 
   return (
-    <div className="App">
-      <header className='header'>
+    <Container className="App">
+      <BrowserRouter>
         <NavBar />
-      </header>
-      <main>
-        <MercadoLibre />
-        <ItemListContainer />
-      </main>
-    </div>
+        <Routes>
+          <Route path='/' />
+          <Route path="/products" element={<ItemListContainer />} />
+          <Route path="/products/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="detail/:productId" element={<ItemDetailContainer />}/>
+        </Routes>
+      </BrowserRouter>
+    </Container>
   );
 }
 

@@ -1,4 +1,4 @@
-import Item from "../Item/Item"
+import Item from '../Item/Item'
 import { Grid, Box, Paper } from '@mui/material'
 
 const ItemList = ({ products }) => {
@@ -11,4 +11,5 @@ const ItemList = ({ products }) => {
       </Box>
       )
     }
+
 export default ItemList

@@ -6,8 +6,10 @@
 }
 
 .counter button {
-    width: 30px;
-    height: 20px;
+    width: 60px;
+    height: 40px;
     margin: 0 20px;
+    border: none;
+    border-radius: 20px;
     background-color: #1194C1;
 }

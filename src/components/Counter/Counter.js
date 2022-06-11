@@ -21,7 +21,7 @@ const Counter = ({initial, stock}) => {
     return (
         <Container className='counter'> 
             <button onClick={decrement} >-</button>
-            <Typography>{amount}</Typography>
+            <Typography style={{color: '#111'}}>{ amount }</Typography>
             <button onClick={increment} >+</button>
         </Container>
     )

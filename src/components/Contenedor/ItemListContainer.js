@@ -8,7 +8,7 @@ import ItemList from "./ItemList/ItemList";
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [spinner, setSpinner] = useState(true)
-    console.log(products)
+  
   const {categoryId} = useParams()
 
 

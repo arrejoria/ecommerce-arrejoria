@@ -1,5 +1,4 @@
 import './ItemDetail.css'
-// import {Grid, Box, Typography} from '@mui/material'
 import Counter from '../../Counter/Counter'
 const ItemDetail = ({id, name, image, price, description}) => {
 

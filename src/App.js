@@ -1,6 +1,6 @@
 import './App.css';
 import {Container} from '@mui/material'
-import React, {useState} from 'react';
+import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Contenedor/ItemListContainer'
 import ItemDetailContainer from './components/Contenedor/ItemDetailContainer/ItemDetailContainer';

@@ -1,5 +1,5 @@
-import {Button, Container, Typography} from '@mui/material';
-import { useState, useEffect } from 'react';
+import {Container, Typography} from '@mui/material';
+import { useState } from 'react';
 import './Counter.css'
 
 const Counter = ({initial, stock}) => {

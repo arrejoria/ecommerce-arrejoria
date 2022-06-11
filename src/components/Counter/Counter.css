@@ -1,5 +1,13 @@
 
 .counter {
-    display: flex;
+    display: flex!important;
     flex-direction: row;
+    justify-content: center;
+}
+
+.counter button {
+    width: 30px;
+    height: 20px;
+    margin: 0 20px;
+    background-color: #1194C1;
 }

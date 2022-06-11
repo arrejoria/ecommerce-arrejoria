@@ -32,19 +32,26 @@
  }
  
  .nav {
-     align-items: center;
      background-color: transparent;
      display: grid;
      height: 80px;
      grid-template-columns: 1fr 2fr 1fr;
-     position: relative;
-     width: 100%;
+     grid-template-areas: 
+        'logo botonera cart';
+    list-style: none;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
  }
  
  
  .logo {
      display: flex;
      width: 100px;
+     grid-area: logo;
+     justify-self: left;
  }
  
   
@@ -57,18 +64,21 @@
  }
  .nav_list{
      /* flex: 0 0 auto; */
-     display: block;
-     padding: 0;
-     margin: 0;
-     width: 100%;
-     white-space:nowrap
+     display: inline-block;
+     grid-area: botonera;
+     /* white-space:nowrap */
+     
  
  } 
  
+ .cart-summary {
+    grid-area: cart;
+ }
+
  .nav_item {
      /* width: 25%; */
-     margin: 0 10px;
-     padding: 0 10px;
+     /* margin: 0 10px;
+     padding: 0 10px; */
      box-sizing: border-box;
      display: inline-block;
      position: relative;
@@ -78,6 +88,8 @@
  .nav_link {
      color: var(--color-5);
      font: normal normal normal 22px/2rem var(--primary-font);
+     margin: 0 0.7vw;
+
      /* border-bottom: 0px solid #FFF; */
  
  }
@@ -147,7 +159,15 @@
      color: red;
  }
  
- 
+ @media (max-width: 1024px) {
+    .nav {
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'logo . cart'
+        '. botonera .';
+    }
+ }
+
  @media (max-width: 768px) {
      .nav {
          margin-top: 20px;

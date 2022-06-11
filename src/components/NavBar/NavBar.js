@@ -41,7 +41,7 @@ const NavBar = () => {
               </ul>
             </div>
           </li>
-          <li className="nav_item nav_item-active">
+          {/* <li className="nav_item nav_item-active">
             <a href="/package-lock.json" className="nav_link">
               Buzos
             </a>
@@ -50,7 +50,7 @@ const NavBar = () => {
             <a href="/package-lock.json" className="nav_link">
               Otros
             </a>
-          </li>
+          </li> */}
         </ul>
         <CartWidget />
       </nav>

@@ -17,9 +17,7 @@ const ItemListContainer = () => {
     <Container className="main-section">
       <h1 className="main-title"> PROYECTO EN DESARROLLO </h1>
         <div className="products">
-          <ul>
             <ItemList products={ products }/>
-          </ul>
         </div>
     </Container>
   );

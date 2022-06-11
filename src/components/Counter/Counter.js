@@ -1,6 +1,6 @@
 import {Button, Container, Typography} from '@mui/material';
 import { useState, useEffect } from 'react';
-
+import './Counter.css'
 
 const Counter = ({initial, stock}) => {
 
@@ -20,9 +20,9 @@ const Counter = ({initial, stock}) => {
 
     return (
         <Container className='counter'> 
-            <Button onClick={decrement} size="small" variant="contained">-</Button>
+            <button onClick={decrement} >-</button>
             <Typography>{amount}</Typography>
-            <Button onClick={increment} size="small" variant="contained">+</Button>
+            <button onClick={increment} >+</button>
         </Container>
     )
 }

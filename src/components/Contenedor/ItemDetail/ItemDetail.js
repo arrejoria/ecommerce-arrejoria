@@ -1,6 +1,6 @@
 import './ItemDetail.css'
 import Counter from '../../Counter/Counter'
-const ItemDetail = ({id, name, image, price, description}) => {
+const ItemDetail = ({id, name, image, price, description, stock}) => {
 
     return( 
             <section className='product_detail-container'>
@@ -15,7 +15,7 @@ const ItemDetail = ({id, name, image, price, description}) => {
                             <p>{description}</p>
                         </div>
                         <div className='add__btn'>
-                            <Counter />
+                            <Counter initial={0} stock={stock} />
                         </div>
                 </div>
               </div>

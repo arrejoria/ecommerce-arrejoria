@@ -5,7 +5,7 @@ import './Counter.css'
 const Counter = ({initial, stock}) => {
 
     const [amount, setAmount] = useState(initial)
-    const [result, setResult] = useState(0)
+    // const [result, setResult] = useState(0)
 
 
     const decrement = () => {

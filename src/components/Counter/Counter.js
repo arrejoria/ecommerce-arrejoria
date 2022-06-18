@@ -18,6 +18,7 @@ const Counter = ({initial, stock}) => {
 
     console.log('Antes del montaje y en cada rerender (ACTUALIZACION')
 
+    
     return (
         <Container className='counter'> 
             <button onClick={decrement} >-</button>

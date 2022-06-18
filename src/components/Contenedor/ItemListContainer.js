@@ -12,6 +12,11 @@ const ItemListContainer = () => {
   const {categoryId} = useParams()
 
 
+  window.addEventListener("resize", () => {
+      console.log("resize")
+  })
+
+
   useEffect(() => {
     setSpinner(true)
 

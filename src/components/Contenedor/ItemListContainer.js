@@ -3,19 +3,13 @@ import { useState, useEffect } from "react";
 import { Container } from "@mui/material";
 import { getProducts, getProductsByCategory } from "../../asyncmock";
 import { useParams } from "react-router-dom";
-import ItemList from "./ItemList/ItemList";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [spinner, setSpinner] = useState(true)
   
   const {categoryId} = useParams()
-
-
-  window.addEventListener("resize", () => {
-      console.log("resize")
-  })
-
 
   useEffect(() => {
     setSpinner(true)

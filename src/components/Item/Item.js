@@ -1,8 +1,7 @@
 import './Item.css'
 import { Card, CardContent, CardMedia, Button, Grid } from '@mui/material'
 import { Link } from 'react-router-dom';
-
-
+ 
 const Item = ( {id, name, image } ) => {
 
     return (
@@ -19,7 +18,7 @@ const Item = ( {id, name, image } ) => {
                 image={image}
                 alt={name}
               />
-              <CardContent>
+              <CardContent className='card__content'>
                 <Link to={`/detail/${id}`}>
                   <Button variant="text" className='item__btn'
                   sx={{

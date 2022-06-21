@@ -1,8 +1,6 @@
-
 .counter {
     display: flex!important;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
 
@@ -13,5 +11,10 @@
     cursor: pointer;
     height: 30px;
     margin: 0 15px;
-    width: 30px;
+    padding-inline: 1rem;
+    width: max-content;
+}
+
+.counter button:active {
+    background-color: #ccc;
 }

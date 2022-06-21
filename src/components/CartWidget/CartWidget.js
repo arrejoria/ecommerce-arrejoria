@@ -1,16 +1,21 @@
 // get our fontawesome imports
 import { ShoppingCart } from '@mui/icons-material';
+import { useContext } from 'react';
+import CartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import './CartWidget.css';
-// import { Link } from 'react-router-dom';
+
 const CartWidget = () => {
+
+    const { quantity } = useContext(CartContext)
+
 
     return (
         <div className="cart-summary">
-            <a href='/'>
+            <Link to='/cart'>
                 <ShoppingCart />
-            </a>
-            <div className="cart-summary-item"> 0 </div>
+            </Link>
+            <div className="cart-summary-item">{ quantity }</div>
         </div>
     )
 }

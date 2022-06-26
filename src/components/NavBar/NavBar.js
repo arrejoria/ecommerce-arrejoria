@@ -41,6 +41,11 @@ const NavBar = () => {
                     Juegos
                   </Link>
                 </li>
+                <li className="dropdown_item">
+                  <Link to="/products/category/music" className="dropdown_link">
+                    Música
+                  </Link>
+                </li>
               </ul>
             </div>
           </li>

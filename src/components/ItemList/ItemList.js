@@ -1,5 +1,6 @@
-import Item from '../Item/Item'
-import { Grid, Box, Paper } from '@mui/material'
+import {memo} from 'react';
+import Item from '../Item/Item';
+import { Grid, Box } from '@mui/material';
 
 const ItemList = ({ products }) => {
 
@@ -9,7 +10,7 @@ const ItemList = ({ products }) => {
           {products.map( prod => <Item className="product-item" key={prod.id} {...prod} /> )}
         </Grid>
       </Box>
-      )
+      );
     }
 
-export default ItemList
+export default memo(ItemList);

@@ -5,51 +5,53 @@ import { getProducts, getProductsByCategory } from "../../asyncmock";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import { db } from '../../services/firebase';
+
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const [spinner, setSpinner] = useState(true)
-  
-  const {categoryId} = useParams()
+  const [spinner, setSpinner] = useState(true);
+  const {categoryId} = useParams();
 
   useEffect(() => {
-    setSpinner(true)
 
-    if(!categoryId){
-      getProducts().then((prods) => {
-        setProducts(prods);
+    setSpinner(true);
 
-      }).catch( error => {
-        console.log(error)
+    const collectionRef = categoryId ? (
+      query(collection(db, 'products'), where('category', '==', categoryId))
+    ) : (collection(db,'products'));
 
-      }).finally( () => {
-          setSpinner(false)
+    getDocs(collectionRef).then(response => {
+      console.log(response)
+
+      const productsFormatted = response.docs.map(doc => {
+        return {id: doc.id, ...doc.data() }; 
       });
-    }else{
-      getProductsByCategory(categoryId).then(prods => {
-        setProducts(prods)
-
-      }).catch( error => {
-        console.log(error)
-
-      }).finally(() => {
-        setSpinner(false)
-        
-      });
+      setProducts(productsFormatted);
+    }).catch(error => {
+      console.log(error)
     }
-
+    ).finally(() => {
+      setSpinner(false);
+    }
+    )
   }, [categoryId]);
-
+ 
   if(spinner){
-    return <h1 style={{color: "#FFF"}}>Cargando productos...</h1>
+    return <h1 style={{color: "#FFF"}}>Cargando productos...</h1>;
   }
 
   return (
     <Container className="main-section">
         <div className="products">
-            <ItemList products={ products }/>
+            {products.length > 0 ? (
+                <ItemList products={products} />
+            ) : (
+                <h1 style={{color: "#FFF"}}>No hay productos</h1>
+            )}
         </div>
     </Container>
   );
-};
+}
 
 export default ItemListContainer;

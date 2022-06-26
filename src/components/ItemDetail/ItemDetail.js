@@ -2,20 +2,23 @@ import './ItemDetail.css'
 import { useContext, useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount'
 import CartContext from '../../Context/CartContext';
-import Cart from '../Cart/Cart'
 import { Link } from 'react-router-dom';
-
+import { useNotification } from '../../Notifications/Notification';
 
 const ItemDetail = ({id, name, image, price, description, stock}) => {
-    const [quantityAdded, setQuantityAdded] = useState(0)
 
+    const [productoAgregado, setProductoAgregado] = useState(0)
 
     const {addItem, isInCart} = useContext(CartContext)
 
+    const showNotification = useNotification();
+
     const onAddToCart = (quantity) => {
-      console.log('Se agrega al carrito')
+      
+      showNotification('Producto agregado al carrito', 'success')
+
       addItem({id, name, image, price, quantity})
-      setQuantityAdded(quantity)
+      setProductoAgregado(quantity)
     }
 
     return( 
@@ -31,13 +34,12 @@ const ItemDetail = ({id, name, image, price, description, stock}) => {
                             <p>{description}</p>
                         </div>
                         <div className='product__inner-btn'>
-                            {!isInCart(id) || quantityAdded > 0
-                            ? <ItemCount onAdd={onAddToCart} initial={0} stock={stock} quantity={quantityAdded} /> 
+                            {!isInCart(id) && stock > 0
+                            ? <ItemCount onAdd={onAddToCart} initial={0} stock={stock} quantity={productoAgregado} /> 
                             : <Link to='/cart' className='to__cart'> Ir al carrito </Link>}
                         </div>
                 </div>
               </div>
-              <Cart />
             </section>
     )
 }

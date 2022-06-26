@@ -20,5 +20,13 @@
 
 .web_msg-content {
     color: #FFF;
-    font: normal normal bold 44px/20 "Poppins", sans-serif;
+}
+.web_msg-container {
+    margin-top: 40vh;
+}
+.web_msg {
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 10px;
+    font: normal normal bold 32px/1 "Poppins", sans-serif;
 }

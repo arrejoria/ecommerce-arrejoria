@@ -10,7 +10,8 @@ const Home = () => {
                 <h3 className="subtitle">Bienvenido a la pagina principal</h3>
             </Container>
             <Container component="section" className='container web_msg-container'>
-                <h1 className="web_msg-content">Ecommerce en desarrollo</h1>
+                <p className="web_msg">Ecommerce en proceso de desarrollo. Estamos trabajando en esta seccion</p>
+                <p className="web_msg">Por favor, ir a "Remeras" para ver nuestros productos</p>
             </Container>
         </Container>
 

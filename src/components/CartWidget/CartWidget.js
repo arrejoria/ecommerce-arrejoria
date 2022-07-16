@@ -1,4 +1,3 @@
-// get our fontawesome imports
 import { ShoppingCart } from '@mui/icons-material';
 import { useContext } from 'react';
 import CartContext from '../../Context/CartContext';

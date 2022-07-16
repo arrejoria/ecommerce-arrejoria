@@ -1,0 +1,35 @@
+.checkout-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.confirmation-msg {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    margin: 2rem auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.confirmation-btn {
+    font: normal normal normal 1.5rem/1.5rem 'Poppins', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.confirmation-btn:hover {
+    background-color: #000;
+    color: #FFF;
+}

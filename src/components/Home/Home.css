@@ -3,21 +3,6 @@
     color: #FFF;
 }
 
-/*
-.web_msg-container {
-    background-image: url('../../img/QBR-main_bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}*/
-
 .web_msg-content {
     color: #FFF;
 }

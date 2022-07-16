@@ -1,40 +1,98 @@
 
+.cart-header {
+    font: normal normal bold 22px/1 "Poppins", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.cart-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
 
+.header-title {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    width: 100%;
+}
+.header-item {
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.header-item p {
+    font: normal normal bold 14px/1 "Poppins", sans-serif;
+    margin: 0;
+}
 .cart-items {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    padding: 20px;
-}
-
-[class*='cart-item-'] {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
-    width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: #fff;
     border-bottom: 1px solid #e6e6e6;
 }
 
-[class*='cart-item-'] p {
-    margin: 0;
-    font-weight: bold;
+.cart-item {
+    padding: .566rem 0;
+    width: 100%;
 }
 
-.cart-item-remove button{
-    display: flex;
+.cart-item p {
+    font: normal normal normal 14px/1 "Poppins", sans-serif;
+    margin: 0;
+}
+
+.cart-item:nth-child(1) p:first-child{
+    font-weight: bold;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.cart-item-remove button:first-child{
     align-items: center;
+    background-color: #e6e6e6;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    font: normal normal normal 14px/1 'Poppins';
+    height: auto;
     justify-content: center;
     margin-inline: 20px;
-    width: 100px;
-    height: auto;
     padding: 5px;
+    width: auto;
+}
+
+.cart-item-remove button:last-child{
+    display: none;
+    align-items: center;
     background-color: #e6e6e6;
-    border-radius: 10px;
     border: 1px solid #999999;
+    border-radius: 10px;
     cursor: pointer;
     font: normal normal normal 14px/1 'Poppins';
+    height: auto;
+    justify-content: center;
+    margin-inline: 20px;
+    padding: 5px;
+    width: auto;
 }

@@ -7,7 +7,7 @@ import {getDoc, doc} from 'firebase/firestore'
 import {db} from '../../../services/firebase'
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({title}) => {
     
     const [product, setProduct] = useState()
 
@@ -19,7 +19,6 @@ const ItemDetailContainer = () => {
         const docRef = doc(db, 'products', productId);
         
         getDoc(docRef).then(doc => {
-            console.log(doc)
             const productFormatted = { id: doc.id, ...doc.data() };
             setProduct(productFormatted) 
         }).catch(error => {
@@ -31,12 +30,12 @@ const ItemDetailContainer = () => {
     }, [productId] )
         
     if(spinner){
-        return <h1 style={{color: "#FFF"}}>Cargando detalles...</h1>
+        return <div className="loading"><h1>Cargando detalles</h1></div>
       }
 
     return (
         <>
-            <h1 style={{color: "#FFF"}}>Detalle del producto</h1>
+            <h1 style={{color: "#FFF"}}>{title}</h1>
             <ItemDetail {...product} />
         </>
     )

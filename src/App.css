@@ -3,3 +3,42 @@
 
 }
 
+.section-title {
+  color: #FFF;
+  font: normal normal normal 1.677rem/1.2 'Poppins';
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading h1 {
+  position: relative;
+  color: #FFF;
+  font-size: 2em;
+  letter-spacing: 5px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.loading h1::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #333;
+  border-bottom: 3px solid #FFF;
+  animation: spin 2s linear infinite;
+  overflow: hidden;
+}
+@keyframes spin {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

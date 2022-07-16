@@ -1,6 +1,6 @@
+import './CartItem.css'
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
-import './CartItem.css'
 
 import { useNotification } from "../../Notifications/Notification";
 
@@ -19,21 +19,22 @@ import { useNotification } from "../../Notifications/Notification";
     const {name, price, quantity } = item;
 
     return (
-        <div className="cart-items">
-            <div className="cart-item-title">
-                <p>{name}</p>
-            </div>
-            <div className="cart-item-quantity">
-                <p>{quantity}</p>
-            </div>
-            <div className="cart-item-price">
-                <p>{price}</p>
-            </div>
-            <div className="cart-item-remove">
-                <button onClick={remove}>remover</button>
-            </div>
-        </div>
 
+            <div className="cart-items">
+                <div className="cart-item">
+                    <p>{name}</p>
+                </div>
+                <div className="cart-item">
+                    <p>{quantity}</p>
+                </div>
+                <div className="cart-item">
+                    <p>${price}</p>
+                </div>
+                <div className="cart-item-remove">
+                    <button onClick={remove}>remover</button>
+                    <button onClick={remove}>X</button>
+                </div>
+            </div>
     );
     }
 

@@ -1,8 +1,8 @@
 import './Item.css'
-import { Card, CardContent, CardMedia, Button, Grid } from '@mui/material'
+import { Card, CardContent, CardMedia, Button, Grid, Typography } from '@mui/material'
 import { Link } from 'react-router-dom';
  
-const Item = ( {id, name, image } ) => {
+const Item = ( {id, name, image, stock } ) => {
 
     return (
 
@@ -10,7 +10,8 @@ const Item = ( {id, name, image } ) => {
             <Card
             sx={{ 
              maxWidth: 345,
-             height: 'auto',
+             height: '100%',
+             maxHeight: 500,
              }}>
               <CardMedia
                 component="img"
@@ -19,14 +20,12 @@ const Item = ( {id, name, image } ) => {
                 alt={name}
               />
               <CardContent className='card__content'>
-                <Link to={`/detail/${id}`}>
-                  <Button variant="text" className='item__btn'
-                  sx={{
-                    background: '#111',
-                    color: '#FFF',
+                <Typography gutterBottom variant="h5" component="h2"> {name} </Typography>
+                <Typography component="p" sx={{
                     fontWeight: 600,
-                   }}>Ver Detalle</Button>
-                </Link>
+                    marginBottom: '1rem'
+                   }} >Cantidad disponible en stock: {stock} </Typography>
+                {stock > 0 && <Link to={`/detail/${id}`}> <Button variant="text" className='item__btn' sx={{background: '#111', color: '#FFF', fontWeight: 600}}>Ver Detalle</Button></Link>}
               </CardContent>
             </Card>
         </Grid>

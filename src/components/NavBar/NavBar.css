@@ -56,7 +56,6 @@
  
   
  .logo span {
-     /* flex: 0 0 auto; */
      color: #FFF;
      font: normal normal bold 36px/0 var(--primary-font);
      padding-inline: 10px;
@@ -64,11 +63,8 @@
      vertical-align: middle;
  }
  .nav_list{
-     /* flex: 0 0 auto; */
      display: inline-block;
      grid-area: botonera;
-     /* white-space:nowrap */
-     
  
  } 
  
@@ -77,9 +73,6 @@
  }
 
  .nav_item {
-     /* width: 25%; */
-     /* margin: 0 10px;
-     padding: 0 10px; */
      box-sizing: border-box;
      display: inline-block;
      position: relative;
@@ -90,8 +83,6 @@
      color: var(--color-5);
      font: normal normal normal 22px/2rem var(--primary-font);
      margin: 0 0.7vw;
-
-     /* border-bottom: 0px solid #FFF; */
  
  }
  

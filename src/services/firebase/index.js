@@ -1,16 +1,15 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCz9pdKRRonhhSRenkpGW4ZhEbGS1fzEMo",
-  authDomain: "qbr-ecommerce.firebaseapp.com",
-  projectId: "qbr-ecommerce",
-  storageBucket: "qbr-ecommerce.appspot.com",
-  messagingSenderId: "534982847899",
-  appId: "1:534982847899:web:dc3ad92484e663ee55053e"
+  apiKey: process.env.REACT_APP_apiKeyNPM,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messaginSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+export const db = getFirestore(app)

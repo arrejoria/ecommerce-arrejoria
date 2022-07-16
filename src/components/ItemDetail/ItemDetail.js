@@ -20,7 +20,7 @@ const ItemDetail = ({id, name, image, price, description, stock}) => {
       addItem({id, name, image, price, quantity})
       setProductoAgregado(quantity)
     }
-
+    
     return( 
             <section className='product__detail-container'>
               <div className='product__detail-content'>

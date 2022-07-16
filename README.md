@@ -1,4 +1,4 @@
-##PROFE NO ME ANDA LA APP EN VERCEL:
+## PROFE NO ME ANDA LA APP EN VERCEL:
     Ya le puse las variables de entorno pero no me las toma
     
 ## QBN | Que buena remera!
@@ -38,7 +38,7 @@
 
 
 #### Instalar las dependencias.
-#### `npm start`
+#### `npm install`
 > React App
 >
 > Firebase

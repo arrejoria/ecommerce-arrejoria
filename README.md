@@ -1,4 +1,6 @@
-
+##PROFE NO ME ANDA LA APP EN VERCEL:
+    Ya le puse las variables de entorno pero no me las toma
+    
 ## QBN | Que buena remera!
     Proyecto hecho en CODERHOUSE utilizando REACT-APP y Firebase.
     

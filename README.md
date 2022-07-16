@@ -30,6 +30,13 @@
 >Tutor: Christian Chávez
 
 #
-Que buena remera usa la librería de componentes [@Material UI](https://mui.com/)
-
-
+Que buena remera usa la los siguientes componente:
+> React App
+>
+> Firebase
+>
+> Material UI
+>
+> Fontawesome
+>
+> Boxicons

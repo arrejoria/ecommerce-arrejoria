@@ -52,3 +52,4 @@
 
 Abrir acá [http://localhost:3000](http://localhost:3000) para ver el proyecto con react-app una vez clonado y con sus respectivas dependencias instaladas.
 #
+<img src="qbr-ecommerce-gif.gif" alt="QBR App Demo">

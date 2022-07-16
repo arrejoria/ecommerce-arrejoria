@@ -29,8 +29,14 @@
 >
 >Tutor: Christian Chávez
 
-#
-Que buena remera usa la los siguientes componente:
+# Para visualizar este proyecto:
+
+#### Se deberá clonar el repositorio.
+#### `Clone`
+
+
+#### Instalar las dependencias.
+#### `npm start`
 > React App
 >
 > Firebase
@@ -40,3 +46,9 @@ Que buena remera usa la los siguientes componente:
 > Fontawesome
 >
 > Boxicons
+
+#### Ejecutar el servidor local donde verás el proyecto.
+#### `npm start`
+
+Abrir acá [http://localhost:3000](http://localhost:3000) para ver el proyecto con react-app una vez clonado y con sus respectivas dependencias instaladas.
+#

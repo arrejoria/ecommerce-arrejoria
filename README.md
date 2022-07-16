@@ -1,5 +1,9 @@
+
 ## QBN | Que buena remera!
-    QBN es proyecto eCommerce que cuenta con una gran variedad de remeras de calidad personalizadas por nosotros!
+    Proyecto hecho en CODERHOUSE utilizando REACT-APP y Firebase.
+    
+    QBR es un ecommerce que cuenta con una gran variedad de remeras de calidad perzonalidas
+    con nuestros diseños!
     
 ## Practicas implementadas a lo largo de la cursada
 - [Nivelación & Instalación y configuración del entorno](https://docs.google.com/presentation/d/12tkVyiiiEbzEo6XRXPxv7fYbxpZ6iiroCrJU5A14Cgc/edit#slide=id.p1)
@@ -20,5 +24,32 @@
 - Cart View
 - Item Collection
 
+## CODER DATOS
+>Profesor: Sebastian Zuviria
+>
+>Tutor: Christian Chávez
 
-Que buena remera usa la librería de componentes [@Material UI](https://mui.com/)
+# Para visualizar este proyecto:
+
+#### Se deberá clonar el repositorio.
+#### `Clone`
+
+
+#### Instalar las dependencias.
+#### `npm start`
+> React App
+>
+> Firebase
+>
+> Material UI
+>
+> Fontawesome
+>
+> Boxicons
+
+#### Ejecutar el servidor local donde verás el proyecto.
+#### `npm start`
+
+Abrir acá [http://localhost:3000](http://localhost:3000) para ver el proyecto con react-app una vez clonado y con sus respectivas dependencias instaladas.
+#
+<img src="qbr-ecommerce-gif.gif" alt="QBR App Demo">
